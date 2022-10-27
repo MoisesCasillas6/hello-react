@@ -15,6 +15,7 @@
 <body>
   <div id="app">Render React Here</div>
 
+  <script type="text/babel">
     // CREATE OUR FIRST CLASS COMPONENT
     class Shapes extends React.Component {
       render() {
@@ -27,10 +28,11 @@
     class Circle extends React.Component {
       render() {
         var circleStyle = {
-          width: 100,
-        	height: 100,
+          width: 150,
+        	height: 150,
         	background: "red",
-        	borderRadius: "50%"
+        	borderRadius: "200",
+          borderColor: "black"
         }
         return(
           <h1 style={circleStyle}>Circle</h1>

@@ -27,31 +27,41 @@
   <script type="text/babel">
 
   // RENDER A PARAGRAPH TAG WITH THE CONTENT "I AM A PARAGRAPH"
+    var hi = <h1>Hello World</h1>
+    var ref_hi = document.getElementById("app")
 
+    var ph = <p>I AM A PARAGRAPH</p>
+    var ref_ph = document.getElementById("p")
+
+    var vis = <a href="https://google.com.mx">Visit Google</a>
+    var ref_vis = document.getElementById("g")
+
+    var list = <ul> <li> Do something 1 </li> <li> Do something 2 </li> <li> Do something 3 </li></ul>
+    var ref_list = document.getElementById("lista")
     // RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS (REACT WHAT, REACT WHERE)
     ReactDOM.render(
       // REACT WHAT - JSX
-      <h1>Hello World</h1>,
+      hi,
       // REACT WHERE - DIV WITH ID OF "APP"
-      document.getElementById("app")
+      ref_hi
     );
     ReactDOM.render(
       // REACT WHAT - JSX
-      <p>I AM A PARAGRAPH</p>,
+      ph,
       // REACT WHERE - DIV WITH ID OF "APP"
-      document.getElementById("p")
+      ref_ph
     );
     ReactDOM.render(
       // REACT WHAT - JSX
-      <a href="https://google.com.mx">Visit Google</a>,
+      vis,
       // REACT WHERE - DIV WITH ID OF "APP"
-      document.getElementById("g")
+      ref_vis
     );
     ReactDOM.render(
       // REACT WHAT - JSX
-      <ul> <li> Do something 1 </li> <li> Do something 2 </li> <li> Do something 3 </li></ul>,
+      list,
       // REACT WHERE - DIV WITH ID OF "APP"
-      document.getElementById("lista")
+      ref_list
     );
   </script>
 
