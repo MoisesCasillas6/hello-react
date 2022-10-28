@@ -21,36 +21,22 @@
   <!-- JAVASCRIPT -->
   <script type="text/babel">
 
-    function FamilyList(props) {
-      var femaleSiblings = props.siblings.filter(function(person) {
-        return person.female;
-      }).map(function(person) {
-        return <div key={person.id}>{person.name}</div>;
-      });
-      // CHALLENGE - use filter and map to generate JSX for male siblings
-      var maleSiblings = props.siblings.filter(function(person) {
-        return person.female === false;
-      }).map(function(person) {
-        return <div key={person.id}>{person.name}</div>
-      });
+// Challenge - Use Filter Method to Return Only Female Names to the DOM  
 
+class FamilyList extends React.Component {
+    render() {
+      // Filter Array Then Transform with Map Method
       return(
-        <div>
-          <h1>Female Siblings</h1>
-            <div>
-              
-              {femaleSiblings}
-            </div>
-            <hr/>
-          <h1>Male Siblings</h1>
-            <div>
-              
-              {maleSiblings}
-            </div>
-        </div>
+        <div>{this.props.siblings.filter(function(p){
+            return p.female
+          }).map(function(p){
+            return <div key ={p.id}> {p.name} </div>
+          })}</div>
       );
     }
+  }    
 
+    // ARRAY OF OBJECTS - 3 PROPS (ID, NAME AND FEMALE) 3 VALUES (NUMBER, STRING, BOOLEAN)
     var siblings = [{id: 1, name: 'Chris', female: false}, {id: 2, name: 'Jeff', female: false},
                 {id: 3, name: 'Julie', female: true}, {id: 4, name: 'Jessica', female: true}];
 
